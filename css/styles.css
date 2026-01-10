@@ -36,6 +36,8 @@ img {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+        background: #fff;
 }
 
 .header-logo {
@@ -56,6 +58,7 @@ img {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
 }
 
 .menu-nav a {
@@ -66,24 +69,23 @@ img {
     display: inline-block;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-nav {
     display: flex;
     gap: 40px;
     margin-left: 76px;
-
 }
 
 .menu-nav a:hover,
 .menu-nav a:focus {
     color: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link-current {
+.menu-nav .nav-link-current {
     position: relative;
-
+    color: #404bbf;
 }
 
 
@@ -94,7 +96,7 @@ img {
     bottom: -1px;
     left: 0;
     border-radius: 2px;
-        width: 48px;
+        width: 100%;
         height: 4px;
         background: #404bbf;
 }
@@ -115,12 +117,12 @@ a {
     display: inline-block;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-info a:hover,
 .contact-info a:focus {
     color: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 address {
@@ -148,7 +150,9 @@ h1 {
 .hero-section {
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-        url(/go-it-markup-hw-04/images/people-office\ 1.jpg);
+        url(../images/people-office.jpg);
+        max-width: 1440px;
+        margin: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -181,13 +185,13 @@ h1 {
     border-radius: 4px;
     background-color: #4d5ae5;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-btn:hover,
 .header-btn:focus {
     color: #fff;
     background-color: #404bbf;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
@@ -279,7 +283,7 @@ h1 {
 
 .section-team-card {
     text-align: center;
-padding: 32px 16px 8px;
+padding: 32px 16px;
 }
 
 
@@ -290,7 +294,7 @@ padding: 32px 16px 8px;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-    margin-bottom: 8px;
+    /* padding-bottom: 8px; */
 }
 
 .section-team-text {
@@ -313,8 +317,10 @@ display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
-    margin-bottom: 32px;
+    margin-top: 8px;
     }
+
+
 
 .media-icon {
 fill: #F4F4FD;
@@ -323,16 +329,22 @@ fill: #F4F4FD;
 .media-icon-list {
     width: 40px;
         height: 40px;
+}
+
+.team-social-link {
+    width: 100%;
+        height: 100%;
         background-color: #4d5ae5;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
-.media-icon-list:hover {
-background-color: #31d0aa;
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.team-social-link:hover {
+background-color: #404bbf;
 }
     
 
@@ -357,6 +369,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .portfolio-card {
     background-color: #fff;
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card:hover .text-portfolio-item{
@@ -424,7 +437,6 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #fff;
-        margin-left: 120px;
 }
 
 .footer-logo {
@@ -442,20 +454,29 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
-    margin-bottom: 32px;
-    margin-left: 120px;
+    gap: 16px;
     margin-top: 16px;
 }
 
 .footer-icon-list {
     width: 40px;
     height: 40px;
+    
+}
+
+.footer-icon-list a {
+    width: 100%;
+    height: 100%;
     background-color: #4d5ae5;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-icon-list a:hover {
+ background-color: #31d0aa;
 }
 
 .style-logo {}
@@ -470,7 +491,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: start;
     align-items: baseline;
-    
+    gap: 120px;
 }
 
 footer {
